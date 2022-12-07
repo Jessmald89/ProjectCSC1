@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Final Project</title>
+    </head>
+    <body>
+        <h1>Create List(Shopping or To do)</h1>
+        
+            <legend>Enter needed items</legend>
+            <input type = "text" id = "add"><br><br>
+            <input type="button" id="addStuff" value="Add"><br><br>
+        
+        <fieldset>
+            <legend>Your List</legend>
+            <p id= "list"></p>
+        </fieldset>
+
+        <script type="text/javascript">
+            let g = [];
+
+            document.getElementById("addStuff").addEventListener('click', addItems);
+
+            function addItems(){ 
+                let needed = document.getElementById("add").value;
+                g.push(needed); 
+                document.getElementById("list").innerHTML = g.join("<br>");
+            }
+
+            function displayList(){
+                document.getElementById("list").innerHTML = g.join("<br>");
+            }
+
+        </script>
+    </body>
+</html>
