@@ -17,7 +17,7 @@ app.post('/ProjectCSCPost',(req,res) =>{
 
 
 app.listen(8080, function () {
-  console.log('Sever is listening on port 8080');
+  console.log('Server is listening on port 8080');
 });
 
 module.exports = app;
